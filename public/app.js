@@ -1,4 +1,5 @@
-// -- variables:
+// variables
+
 var display = document.getElementById('display'),
     inputs = document.getElementsByClassName('inputs'),
     operators = document.getElementsByClassName('operators'),
@@ -13,16 +14,19 @@ var display = document.getElementById('display'),
     i,
     io;
 
+// Numeric value input
 function dataInput() {
     currentInputValue = this.value;
     display.value += currentInputValue;
 }
 
+// Operator input
 function operatorInput() {
     currentOperator = this.value;
     display.value += currentOperator;
 }
 
+// Displays calculated result
 function displayResult() {
     if (display.value === "") {
         display.value = "";
@@ -36,15 +40,18 @@ function displayResult() {
     }
 }
 
+// Deletes a single value
 function deleteSingle() {
     backspaceValue = display.value;
     display.value = backspaceValue.substr(0, backspaceValue.length - 1);
 }
 
+// Clears input field
 function clearAll() {
     display.value = "";
 }
 
+// Blocks alpha characters on keyboard and specifies keycodes
 function keyboardInput(key) {
     if ((key.which < 0 || key.which > 57) && (key.which !== 13 && key.which !== 99)) {
         return false;
@@ -95,25 +102,31 @@ function keyboardInput(key) {
     }
 }
 
+// Deletes value
 function backspaceKeyEvent (event) {
     if (event.which === 8) {
         deleteSingle();
     }
 }
 
+// Code execution
 window.onload = function () {
     document.onkeypress = keyboardInput;
     document.onkeydown = backspaceKeyEvent;
 
+// Numeric data input
 for (i = 0; i < inputs.length; i++) {
         inputs[i].onclick = dataInput;
     }
 
+    // Operator input
     for (io = 0; io < operators.length; io++) {
         operators[io].onclick = operatorInput;
     }
-
+// Displays calculated result
     equal.onclick = displayResult;
+// Deletes one
     backspace.onclick = deleteSingle;
+// Clears input
     clear.onclick = clearAll;
 };
