@@ -5,7 +5,7 @@
 */
 
 
-/* Colors */
+/* COLORS */
 .color-primary-0 { color: #4E5470 }	/* Primary color */
 .color-primary-1 { color: #9094A5 }
 .color-primary-2 { color: #6A6F88 }
@@ -20,6 +20,13 @@
     /*margin: 0;
     padding: 0;*/
     box-sizing: border-box;
+}
+
+form {
+    width: 100%;
+    padding: 0;
+    font-family: 'Lekton', sans-serif;
+    font-weight: 700;
 }
 
 html,
@@ -50,13 +57,6 @@ body {
 
 .formContainer:after {
     clear: both;
-}
-
-form {
-    width: 100%;
-    padding: 0;
-    font-family: 'Lekton', sans-serif;
-    font-weight: 700;
 }
 
 #display {
