@@ -1,12 +1,19 @@
-/* Colors */
+/*
+- COLORS
+- GENERAL
+- MEDIA QUERIES
+*/
 
-.color-primary-0 { color: #4E5470 }	/* Main Primary color */
+
+/* Colors */
+.color-primary-0 { color: #4E5470 }	/* Primary color */
 .color-primary-1 { color: #9094A5 }
 .color-primary-2 { color: #6A6F88 }
 .color-primary-3 { color: #363C56 }
 .color-primary-4 { color: #212848 }
 .color-primary-5 { color: rgb(183, 187, 209) }
 
+/* GENERAL */
 *,
 *:before,
 *:after {
@@ -114,6 +121,7 @@ input:focus {
     font-weight: 700;
 }
 
+/* MEDIA QUERIES */
 @media screen and (max-width: 400px) {
     .formContainer {
         margin: 0 auto;

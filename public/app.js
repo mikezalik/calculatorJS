@@ -1,5 +1,4 @@
-// variables
-
+// Variables
 var display = document.getElementById('display'),
     inputs = document.getElementsByClassName('inputs'),
     operators = document.getElementsByClassName('operators'),
@@ -119,14 +118,17 @@ for (i = 0; i < inputs.length; i++) {
         inputs[i].onclick = dataInput;
     }
 
-    // Operator input
+// Operator input
     for (io = 0; io < operators.length; io++) {
         operators[io].onclick = operatorInput;
     }
+
 // Displays calculated result
     equal.onclick = displayResult;
+
 // Deletes one
     backspace.onclick = deleteSingle;
+
 // Clears input
     clear.onclick = clearAll;
 };
