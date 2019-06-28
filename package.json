@@ -1,0 +1,22 @@
+{
+  "name": "calculatorjs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mikezalik/calculatorJS.git"
+  },
+  "author": "Michael Zalik",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mikezalik/calculatorJS/issues"
+  },
+  "homepage": "https://github.com/mikezalik/calculatorJS#readme",
+  "devDependencies": {
+    "prettier-eslint": "^9.0.0"
+  }
+}
