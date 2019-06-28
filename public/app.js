@@ -37,6 +37,7 @@ function displayResult() {
   }
 }
 
+
 // Deletes a single value
 function deleteSingle() {
   backspaceValue = display.value;
