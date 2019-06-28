@@ -1,10 +1,10 @@
 // Variables
 const display = document.getElementById('display');
-let inputs = document.getElementsByClassName('inputs');
-let operators = document.getElementsByClassName('operators');
-let equal = document.getElementById('equal');
-let clear = document.getElementById('clear');
-let backspace = document.getElementById('backspace');
+const inputs = document.getElementsByClassName('inputs');
+const operators = document.getElementsByClassName('operators');
+const equal = document.getElementById('equal');
+const clear = document.getElementById('clear');
+const backspace = document.getElementById('backspace');
 let currentInputValue;
 let currentOperator;
 let displayValue;
@@ -31,7 +31,7 @@ function displayResult() {
     display.value = '';
   } else {
     displayValue = display.value;
-    displayValue = displayValue.replace(/[\d.]+/g, (n) => parseFloat(n));
+    displayValue = displayValue.replace(/[\d.]+/g, n => parseFloat(n));
     result = eval(displayValue);
     display.value = result;
   }
