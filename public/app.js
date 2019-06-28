@@ -1,17 +1,17 @@
 // Variables
-let display = document.getElementById('display');
-    var inputs = document.getElementsByClassName('inputs');
-    var operators = document.getElementsByClassName('operators');
-    var equal = document.getElementById('equal');
-    var clear = document.getElementById('clear');
-    var backspace = document.getElementById('backspace');
-    var currentInputValue;
-    var currentOperator;
-    var displayValue;
-    var result;
-    var backspaceValue;
-    var i;
-    var io;
+const display = document.getElementById('display');
+let inputs = document.getElementsByClassName('inputs');
+let operators = document.getElementsByClassName('operators');
+let equal = document.getElementById('equal');
+let clear = document.getElementById('clear');
+let backspace = document.getElementById('backspace');
+let currentInputValue;
+let currentOperator;
+let displayValue;
+let result;
+let backspaceValue;
+let i;
+let io;
 
 // Numeric value input
 function dataInput() {
@@ -31,9 +31,7 @@ function displayResult() {
     display.value = '';
   } else {
     displayValue = display.value;
-    displayValue = displayValue.replace(/[\d.]+/g, (n) => {
-            return parseFloat(n);
-        });
+    displayValue = displayValue.replace(/[\d.]+/g, (n) => parseFloat(n));
     result = eval(displayValue);
     display.value = result;
   }
@@ -52,53 +50,52 @@ function clearAll() {
 
 // Blocks alpha characters on keyboard and specifies keycodes
 function keyboardInput(key) {
-    if ((key.which < 0 || key.which > 57) && (key.which !== 13 && key.which !== 99)) {
-        return false;
-    } 
-        key.preventDefault();
-        if (key.which === 48) {
-            display.value += "0";
-        } else if (key.which === 49) {
-            display.value += "1";
-        } else if (key.which === 50) {
-            display.value += "2";
-        } else if (key.which === 51) {
-            display.value += "3";
-        } else if (key.which === 52) {
-            display.value += "4";
-        } else if (key.which === 53) {
-            display.value += "5";
-        } else if (key.which === 54) {
-            display.value += "6";
-        } else if (key.which === 55) {
-            display.value += "7";
-        } else if (key.which === 56) {
-            display.value += "8";
-        } else if (key.which === 57) {
-            display.value += "9";
-        } else if (key.which === 46) {
-            display.value += ".";
-        } else if (key.which === 40) {
-            display.value += "(";
-        } else if (key.which === 41) {
-            display.value += ")";
-        } else if (key.which === 42) {
-            display.value += "*";
-        } else if (key.which === 47) {
-            display.value += "/";
-        } else if (key.which === 43) {
-            display.value += "+";
-        } else if (key.which === 45) {
-            display.value += "-";
-        } else if (key.which === 13) {
-            displayResult();
-        } else if (key.which === 99) {
-            clearAll();
-        } else {
-            display.value = display.value;
-        }
-        return true;
-    
+  if ((key.which < 0 || key.which > 57) && (key.which !== 13 && key.which !== 99)) {
+    return false;
+  }
+  key.preventDefault();
+  if (key.which === 48) {
+    display.value += '0';
+  } else if (key.which === 49) {
+    display.value += '1';
+  } else if (key.which === 50) {
+    display.value += '2';
+  } else if (key.which === 51) {
+    display.value += '3';
+  } else if (key.which === 52) {
+    display.value += '4';
+  } else if (key.which === 53) {
+    display.value += '5';
+  } else if (key.which === 54) {
+    display.value += '6';
+  } else if (key.which === 55) {
+    display.value += '7';
+  } else if (key.which === 56) {
+    display.value += '8';
+  } else if (key.which === 57) {
+    display.value += '9';
+  } else if (key.which === 46) {
+    display.value += '.';
+  } else if (key.which === 40) {
+    display.value += '(';
+  } else if (key.which === 41) {
+    display.value += ')';
+  } else if (key.which === 42) {
+    display.value += '*';
+  } else if (key.which === 47) {
+    display.value += '/';
+  } else if (key.which === 43) {
+    display.value += '+';
+  } else if (key.which === 45) {
+    display.value += '-';
+  } else if (key.which === 13) {
+    displayResult();
+  } else if (key.which === 99) {
+    clearAll();
+  } else {
+    display.value = display.value;
+  }
+  return true;
 }
 
 // Deletes value
